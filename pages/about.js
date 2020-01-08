@@ -1,10 +1,8 @@
-import Link from 'next/link';
+import Header from '../components/Header';
 
 export default () => (
     <div>
-        <Link href="/">
-            <a>Index Page</a>
-        </Link>
+        <Header/>
 
         <p>This is the about page</p>
     </div>
