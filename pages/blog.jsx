@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout.jsx';
 
 const PostLink = props => (
     <li>
@@ -11,7 +11,7 @@ const PostLink = props => (
 
 export default () => (
     <Layout>
-        <h1>My Blog</h1>
+        <h1>Blog</h1>
 
         <ul>
             <PostLink id="hello-nextjs" />
