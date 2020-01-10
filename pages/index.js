@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const PostLink = props => (
     <li>
-        <Link href="/p/[id]" as={`/p/${props.id}`}>
+        <Link href="/post/[id]" as={`/post/${props.id}`}>
             <a>{props.id}</a>
         </Link>
     </li>
