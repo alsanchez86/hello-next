@@ -4,7 +4,7 @@ const linkStyle = {
     marginRight: 15
 };
 
-export default props => (
+export default () => (
     <div>
         <Link href="/">
             <a style={linkStyle}>

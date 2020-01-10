@@ -1,6 +1,6 @@
 import Layout from '../components/Layout.jsx';
 
-export default props => (
+export default () => (
     <Layout>
         <h1>
             Home
