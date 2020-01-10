@@ -1,7 +1,9 @@
 import Layout from '../components/Layout.jsx';
 
-export default () => (
+export default props => (
     <Layout>
-        <p>This is the about page</p>
+        <p>
+            This is the about page
+        </p>
     </Layout>
 );

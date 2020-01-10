@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import Layout from '../components/Layout.jsx';
 
-const PostLink = props => (
-    <li>
-        <Link href="/post/[id]" as={`/post/${props.id}`}>
-            <a>{props.id}</a>
-        </Link>
-    </li>
-);
+function PostLink (props) {
+    return (
+        <li>
+            <Link href="/post/[id]" as={`/post/${props.id}`}>
+                <a>{props.id}</a>
+            </Link>
+        </li>
+    );
+}
 
 export default () => (
     <Layout>
