@@ -10,8 +10,8 @@ function Post (props) {
     );
 };
 
-export default () => (
-    <Layout>
-        <Post/>
-    </Layout>
-);
+export default () =>
+
+<Layout>
+    <Post/>
+</Layout>

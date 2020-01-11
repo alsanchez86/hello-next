@@ -4,30 +4,30 @@ const linkStyle = {
     marginRight: 15
 };
 
-export default () => (
-    <div>
-        <Link href="/">
-            <a style={linkStyle}>
-                Home
-            </a>
-        </Link>
+export default () =>
 
-        <Link href="/blog">
-            <a style={linkStyle}>
-                Blog
-            </a>
-        </Link>
+<div>
+    <Link href="/">
+        <a style={linkStyle}>
+            Home
+        </a>
+    </Link>
 
-        <Link href="/shows">
-            <a style={linkStyle}>
-                Shows
-            </a>
-        </Link>
+    <Link href="/blog">
+        <a style={linkStyle}>
+            Blog
+        </a>
+    </Link>
 
-        <Link href="/about">
-            <a style={linkStyle}>
-                About
-            </a>
-        </Link>
-    </div>
-);
+    <Link href="/shows">
+        <a style={linkStyle}>
+            Shows
+        </a>
+    </Link>
+
+    <Link href="/about">
+        <a style={linkStyle}>
+            About
+        </a>
+    </Link>
+</div>
