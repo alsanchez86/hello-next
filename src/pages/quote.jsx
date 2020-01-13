@@ -1,11 +1,12 @@
 import useSWR from "swr";
+import Layout from '../components/Layout.jsx';
 
 function fetcher(url) {
     return fetch(url)
         .then(r => r.json());
 }
 
-export default function Index() {
+function Index() {
     const { data, error } = useSWR('/api/getQuote', fetcher);
     const author = data?.author;
     let quote = data?.quote;
@@ -50,3 +51,9 @@ export default function Index() {
         </main>
     );
 }
+
+export default () =>
+
+<Layout>
+    <Index/>
+</Layout>
