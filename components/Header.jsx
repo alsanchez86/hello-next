@@ -25,6 +25,12 @@ export default () =>
         </a>
     </Link>
 
+    <Link href="/quote">
+        <a style={linkStyle}>
+            Quote
+        </a>
+    </Link>
+
     <Link href="/about">
         <a style={linkStyle}>
             About
