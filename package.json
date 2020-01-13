@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start"
   },
-  "keywords": [],
+  "keywords": [
+
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
