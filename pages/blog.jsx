@@ -1,6 +1,35 @@
 import Link from 'next/link';
 import Layout from '../components/Layout.jsx';
 
+function getStyle(){
+    return (
+        <style jsx>{`
+            h1,
+            a {
+              font-family: 'Arial';
+            }
+
+            ul {
+              padding: 0;
+            }
+
+            li {
+              list-style: none;
+              margin: 5px 0;
+            }
+
+            a {
+              text-decoration: none;
+              color: blue;
+            }
+
+            a:hover {
+              opacity: 0.6;
+            }
+      `}</style>
+    );
+}
+
 function getPosts() {
     return [{
             id: 'hello-nextjs',
@@ -30,6 +59,7 @@ function PostLink (props) {
 export default () =>
 
 <Layout>
+    {getStyle()}
     <h1>Blog</h1>
 
     <ul>
