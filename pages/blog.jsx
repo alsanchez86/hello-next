@@ -1,11 +1,27 @@
 import Link from 'next/link';
 import Layout from '../components/Layout.jsx';
 
+function getPosts() {
+    return [{
+            id: 'hello-nextjs',
+            title: 'Hello Next.js'
+        },
+        {
+            id: 'learn-nextjs',
+            title: 'Learn Next.js is awesome'
+        },
+        {
+            id: 'deploy-nextjs',
+            title: 'Deploy apps with ZEIT'
+        }
+    ];
+}
+
 function PostLink (props) {
     return (
-        <li>
-            <Link href="/post/[id]" as={`/post/${props.id}`}>
-                <a>{props.id}</a>
+        <li key={props.id}>
+            <Link href="/post/[id]/[title]" as={`/post/${props.id}/${props.title}`}>
+                <a>{props.title}</a>
             </Link>
         </li>
     );
@@ -17,8 +33,8 @@ export default () =>
     <h1>Blog</h1>
 
     <ul>
-        <PostLink id="hello-nextjs" />
-        <PostLink id="learn-nextjs" />
-        <PostLink id="deploy-nextjs" />
+    {getPosts().map(post => (
+        <PostLink id={post.id} title={post.title} />
+    ))}
     </ul>
 </Layout>
