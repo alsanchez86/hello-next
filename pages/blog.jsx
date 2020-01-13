@@ -1,35 +1,6 @@
 import Link from 'next/link';
 import Layout from '../components/Layout.jsx';
 
-function getStyle(){
-    return (
-        <style jsx>{`
-            h1,
-            a {
-              font-family: 'Arial';
-            }
-
-            ul {
-              padding: 0;
-            }
-
-            li {
-              list-style: none;
-              margin: 5px 0;
-            }
-
-            a {
-              text-decoration: none;
-              color: blue;
-            }
-
-            a:hover {
-              opacity: 0.6;
-            }
-      `}</style>
-    );
-}
-
 function getPosts() {
     return [{
             id: 'hello-nextjs',
@@ -48,7 +19,7 @@ function getPosts() {
 
 function PostLink (props) {
     return (
-        <li key={props.id}>
+        <li>
             <Link href="/post/[id]/[title]" as={`/post/${props.id}/${props.title}`}>
                 <a>{props.title}</a>
             </Link>
@@ -58,13 +29,38 @@ function PostLink (props) {
 
 export default () =>
 
-<Layout>
-    {getStyle()}
-    <h1>Blog</h1>
+<>
+    <style jsx>{`
+        h1,
+        a {
+            font-family: 'Arial';
+        }
 
-    <ul>
-    {getPosts().map(post => (
-        <PostLink id={post.id} title={post.title} />
-    ))}
-    </ul>
-</Layout>
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin: 5px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+    `}</style>
+    <Layout>
+        <h1>Blog</h1>
+
+        <ul>
+        {getPosts().map(post => (
+            <PostLink key={post.id} id={post.id} title={post.title} />
+        ))}
+        </ul>
+    </Layout>
+</>
