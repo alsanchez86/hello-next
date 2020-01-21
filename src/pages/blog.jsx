@@ -23,6 +23,7 @@ function PostLink (props) {
             <Link href="/post/[id]/[title]" as={`/post/${props.id}/${props.title}`}>
                 <a>{props.title}</a>
             </Link>
+
             <style jsx>{`
                 li {
                     list-style: none;
@@ -69,6 +70,7 @@ export default () =>
             opacity: 0.6;
         }
     `}</style>
+
     <Layout>
         <h1>Blog</h1>
 
