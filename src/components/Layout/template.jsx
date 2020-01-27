@@ -1,4 +1,4 @@
-import Header from './Header.jsx';
+import Header from '../Header';
 
 const layoutStyle = {
     margin: 20,
@@ -10,5 +10,5 @@ export default (props) =>
 
 <div style={layoutStyle}>
     <Header />
-    {props.children}
+    {props.data.children}
 </div>

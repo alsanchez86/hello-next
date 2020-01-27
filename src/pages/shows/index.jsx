@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
-import Layout from '../components/Layout.jsx';
+import Layout from '../../components/Layout';
 
 function Shows (props){
     return (
@@ -10,7 +10,7 @@ function Shows (props){
             <ul>
                 {props.shows.map(show => (
                 <li key={show.id}>
-                    <Link href="/show/[id]" as={`/show/${show.id}`}>
+                    <Link href="/shows/[id]" as={`/shows/${show.id}`}>
                         <a>{show.name}</a>
                     </Link>
                 </li>

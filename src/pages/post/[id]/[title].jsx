@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Markdown from 'react-markdown';
-import Layout from '../../../components/Layout.jsx';
+import Layout from '../../../components/Layout';
 
 function getStyle(){
     return (

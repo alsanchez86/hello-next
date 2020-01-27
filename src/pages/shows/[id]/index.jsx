@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout.jsx';
+import Layout from '../../components/Layout';
 import fetch from 'isomorphic-unfetch';
 
 function Show (props) {

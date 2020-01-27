@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import Layout from '../components/Layout.jsx';
+import Layout from '../../components/Layout';
 
 function fetcher(url) {
     return fetch(url)

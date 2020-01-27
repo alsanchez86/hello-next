@@ -3,14 +3,20 @@ import { generateState } from "./utils";
 export default (state = generateState(), action) => {
     switch (action.type) {
         case "RANDOM_NUMBER":
-            return setRandomNumber(state, action);
+            return setRandomNumber(action);
 
         default:
             return state;
     }
 }
 
-function setRandomNumber(state, action) {
+/**
+ *
+ *
+ * @param {*} action
+ * @returns
+ */
+function setRandomNumber(action) {
     return generateState({
         randomNumber: action.value
     });
