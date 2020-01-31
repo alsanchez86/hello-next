@@ -1,9 +1,13 @@
 import Layout from '../../components/Layout';
 
-export default () =>
+export default (props) =>
 
 <Layout>
-    <h1>
-        Home
-    </h1>
+    <main className="quote-container">
+        <div className="quote">
+            {props.data?.quote}
+        </div>
+
+        {props.data?.author && <span className="author">{props.data?.author}</span>}
+    </main>
 </Layout>

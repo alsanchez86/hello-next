@@ -1,5 +1,6 @@
-import { Provider } from 'react-redux';
+import "../scss/main.scss";
 import App from 'next/app';
+import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 import appStore from '../redux/appStore';
 
@@ -12,7 +13,12 @@ class Metajob extends App {
     }
 
     render() {
-        const { Component, pageProps, store } = this.props;
+        const {
+            Component,
+            pageProps,
+            store
+        } = this.props;
+
         return (
             <Provider store={store}>
                 <Component {...pageProps} />
@@ -21,4 +27,6 @@ class Metajob extends App {
     }
 }
 
-export default withRedux(appStore, {debug: true})(Metajob);
+export default withRedux(appStore, {
+    debug: true
+})(Metajob);

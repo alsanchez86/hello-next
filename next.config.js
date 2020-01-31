@@ -1,9 +1,15 @@
+// const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+const constants = require('next/constants');
 const withSass = require('@zeit/next-sass');
 const withCSS = require("@zeit/next-css");
 
-module.exports = withCSS(withSass({
-    webpack(config, options) {
-        config.module.rules.push({
+console.log(constants);
+
+const nextConfig = {
+    webpack: config => {
+        let rules = (config.module.rules || []);
+
+        rules.push({
             test: /\.svg$/,
             use: [{
                     loader: 'url-loader'
@@ -13,7 +19,7 @@ module.exports = withCSS(withSass({
                 }
             ]
         });
-        config.module.rules.push({
+        rules.push({
             test: /\.(png|jpg|gif|eot|ttf|woff|woff2)$/,
             use: {
                 loader: 'url-loader',
@@ -24,4 +30,10 @@ module.exports = withCSS(withSass({
         });
         return config;
     }
-}));
+};
+
+module.exports = (phase) => {
+    console.log(phase, "phase");
+
+    return withCSS(withSass(nextConfig));
+};

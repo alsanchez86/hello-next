@@ -2,12 +2,10 @@ import React from "react";
 import { connect } from 'react-redux';
 import Template from "./template";
 
-class Home extends React.Component {
+class Index extends React.Component {
     render() {
         return (
-            <Template
-                randomNumber={this.props.randomNumber}
-            />
+            <Template randomNumber={this.props.randomNumber} />
         );
     }
 }
@@ -17,4 +15,4 @@ export default connect(
     (state) => ({
         randomNumber: state.dummyReducer.randomNumber
     })
-)(Home);
+)(Index);

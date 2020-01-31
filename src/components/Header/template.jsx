@@ -1,38 +1,34 @@
 import Link from 'next/link';
 
-const linkStyle = {
-    marginRight: 15
-};
-
 export default () =>
 
-<div>
+<div className="header">
     <Link href="/">
-        <a style={linkStyle}>
+        <a>
             Home
         </a>
     </Link>
 
     <Link href="/blog">
-        <a style={linkStyle}>
+        <a>
             Blog
         </a>
     </Link>
 
     <Link href="/shows">
-        <a style={linkStyle}>
+        <a>
             Shows
         </a>
     </Link>
 
     <Link href="/quote">
-        <a style={linkStyle}>
+        <a>
             Quote
         </a>
     </Link>
 
     <Link href="/about">
-        <a style={linkStyle}>
+        <a>
             About
         </a>
     </Link>

@@ -13,7 +13,7 @@ class About extends React.Component {
 
 export default connect(
     // mapStateToProps
-    (state) => ({}),
+    (state) => (Object),
     // mapDispatchToProps
     (dispatch) => ({
         setRandomNumber: (value) => dispatch(randomNumberAction(value))

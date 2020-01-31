@@ -1,59 +1,17 @@
-import useSWR from "swr";
-import Layout from '../../components/Layout';
+import React from "react";
+import { fetcher } from '../../utils/fetcher';
+import Template from "./template";
 
-function fetcher(url) {
-    return fetch(url)
-        .then(r => r.json());
-}
-
-function Index() {
-    const { data, error } = useSWR('/api/getQuote', fetcher);
-    const author = data?.author;
-    let quote = data?.quote;
-
-    if (!data) {
-        quote = 'Loading...';
+class Quote extends React.Component {
+    static async getInitialProps() {
+        return await fetcher('http://localhost:3000/api/getQuote');
     }
 
-    if (error){
-        quote = 'Failed to fetch the quote.';
+    render() {
+        return (
+            <Template data={this.props}/>
+        );
     }
-
-    return (
-        <main className="center">
-            <div className="quote">
-                {quote}
-            </div>
-
-            {author && <span className="author">- {author}</span>}
-
-            <style jsx>{`
-                main {
-                    width: 90 % ;
-                    max - width: 900 px;
-                    margin: 300 px auto;
-                    text - align: center;
-                }
-                .quote {
-                    font - family: cursive;
-                    color: #e243de;
-                    font - size: 24 px;
-                    padding - bottom: 10 px;
-                }
-                .author {
-                    font - family: sans - serif;
-                    color: #559834;
-
-                font-size: 20px;
-
-                }
-            `}</style>
-        </main>
-    );
 }
 
-export default () =>
-
-<Layout>
-    <Index/>
-</Layout>
+export default Quote;
