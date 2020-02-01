@@ -1,4 +1,4 @@
-import "primereact/resources/themes/nova-light/theme.css";
+// import "primereact/resources/themes/nova-light/theme.css";
 // import "primereact/resources/primereact.min.css";
 // import "primeicons/primeicons.css";
 import "../scss/main.scss";
@@ -30,6 +30,4 @@ class Metajob extends App {
     }
 }
 
-export default withRedux(appStore, {
-    debug: true
-})(Metajob);
+export default withRedux(appStore, { debug: true })(Metajob);
