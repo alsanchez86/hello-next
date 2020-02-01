@@ -32,4 +32,10 @@ export default () =>
             About
         </a>
     </Link>
+
+    <Link href="/dummy">
+        <a>
+            Dummy
+        </a>
+    </Link>
 </div>

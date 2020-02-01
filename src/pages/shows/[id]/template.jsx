@@ -4,12 +4,12 @@ export default (props) =>
 
 <Layout>
     <h1>
-        {props.data?.show?.name}
+        {props.show?.name}
     </h1>
 
     <p>
-        {props.data?.show?.summary?.replace(/<[/]?[pb]>/g, '')}
+        {props.show?.summary?.replace(/<[/]?[pb]>/g, '')}
     </p>
 
-    {props.data?.show?.image ? <img src={props.data?.show?.image?.medium} /> : null}
+    {props.show?.image ? <img src={props.show?.image?.medium} /> : null}
 </Layout>

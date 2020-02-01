@@ -1,3 +1,6 @@
+import "primereact/resources/themes/nova-light/theme.css";
+// import "primereact/resources/primereact.min.css";
+// import "primeicons/primeicons.css";
 import "../scss/main.scss";
 import App from 'next/app';
 import { Provider } from 'react-redux';

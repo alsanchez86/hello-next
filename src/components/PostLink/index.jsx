@@ -4,7 +4,10 @@ import Template from "./template";
 export default class PostLink extends React.Component {
     render() {
         return (
-            <Template data={this.props} />
+            <Template
+                id={this.props?.id}
+                title={this.props?.title}
+            />
         );
     }
 }

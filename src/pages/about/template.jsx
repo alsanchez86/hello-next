@@ -11,5 +11,6 @@ export default (props) =>
     <Button
         label="Set random number"
         icon="pi pi-check"
-        onClick={() => props.data?.setRandomNumber(Math.random())} />
+        onClick={() => props.setRandomNumber(Math.random())}
+    />
 </Layout>

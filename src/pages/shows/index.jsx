@@ -4,14 +4,18 @@ import Template from "./template";
 class Shows extends React.Component {
     static async getInitialProps () {
         const data = await fetcher('https://api.tvmaze.com/search/shows?q=batman');
+        const shows = data.map(e => e.show);
+
         return {
-            shows: data.map(entry => entry.show)
+            shows
         };
     };
 
     render (){
         return (
-            <Template data={this.props} />
+            <Template
+                shows={this.props.shows}
+            />
         )
     }
 }

@@ -6,9 +6,9 @@ export default (props) =>
 <Layout>
     <h1>Blog</h1>
 
-    {(props.data?.posts?.length > 1) ?
+    {(props.posts?.length > 1) ?
     <ul>
-    {props.data?.posts?.map(post => (
+    {props.posts?.map(post => (
         <PostLink key={post?.id} id={post?.id} title={post?.title} />
     ))}
     </ul>

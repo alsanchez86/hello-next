@@ -9,7 +9,10 @@ class Quote extends React.Component {
 
     render() {
         return (
-            <Template data={this.props}/>
+            <Template
+                text={this.props.text}
+                author={this.props.author}
+            />
         );
     }
 }

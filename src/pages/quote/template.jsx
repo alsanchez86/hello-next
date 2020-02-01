@@ -5,9 +5,9 @@ export default (props) =>
 <Layout>
     <main className="quote-container">
         <div className="quote">
-            {props.data?.quote}
+            {props.text}
         </div>
 
-        {props.data?.author && <span className="author">{props.data?.author}</span>}
+        {props.author && <span className="author">{props.author}</span>}
     </main>
 </Layout>

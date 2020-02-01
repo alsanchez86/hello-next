@@ -12,7 +12,7 @@ class Blog extends React.Component {
 
     render() {
         return (
-            <Template data={this.props} />
+            <Template posts={this.props.posts} />
         );
     }
 }

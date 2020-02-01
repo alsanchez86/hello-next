@@ -4,5 +4,5 @@ export default (props) =>
 
 <div className="layout">
     <Header />
-    {props.data?.children}
+    {props.children}
 </div>

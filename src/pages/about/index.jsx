@@ -6,7 +6,9 @@ import Template from "./template";
 class About extends React.Component {
     render() {
         return (
-            <Template data={this.props} />
+            <Template
+                setRandomNumber={this.props.setRandomNumber}
+            />
         );
     }
 }

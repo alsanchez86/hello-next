@@ -7,7 +7,7 @@ export default (props) =>
     <h1>Batman TV Shows</h1>
 
     <ul>
-        {props.data?.shows?.map(show => (
+        {props.shows?.map(show => (
         <li key={show?.id}>
             <Link href="/shows/[id]" as={`/shows/${show?.id}`}>
                 <a>{show?.name}</a>

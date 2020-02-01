@@ -5,6 +5,7 @@ class Show extends React.Component {
     static async getInitialProps (context) {
         const { id } = context.query;
         const show = await fetcher(`https://api.tvmaze.com/shows/${id}`);
+
         return {
             show
         };
@@ -12,7 +13,9 @@ class Show extends React.Component {
 
     render (){
         return (
-            <Template data={this.props} />
+            <Template
+                show={this.props.show}
+            />
         )
     }
 }
