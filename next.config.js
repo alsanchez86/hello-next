@@ -6,6 +6,9 @@ const withCSS = require("@zeit/next-css");
 // console.log(constants);
 
 const nextConfig = {
+    cssLoaderOptions: {
+        url: false
+    },
     webpack: config => {
         config.module.rules.push({
             test: /\.svg$/,
@@ -32,5 +35,5 @@ const nextConfig = {
 
 module.exports = (phase) => {
     // console.log(phase, "phase");
-    return withCSS(withSass(nextConfig));
+    return withSass(withCSS(nextConfig));
 };
