@@ -1,9 +1,6 @@
-// const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 // const constants = require('next/constants');
 const withSass = require('@zeit/next-sass');
 const withCSS = require("@zeit/next-css");
-
-// console.log(constants);
 
 const nextConfig = {
     cssLoaderOptions: {
@@ -34,6 +31,5 @@ const nextConfig = {
 };
 
 module.exports = (phase) => {
-    // console.log(phase, "phase");
     return withSass(withCSS(nextConfig));
 };
