@@ -2,7 +2,7 @@
     "nextApi": {
         "protocol": "http://",
         "port": "3000",
-        "domain": "metajob.everis",
-        "absolute": "http://metajob.everis:3000"
+        "domain": "localhost",
+        "absolute": "http://localhost:3000"
     }
 }

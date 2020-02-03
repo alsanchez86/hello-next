@@ -28,3 +28,8 @@ Nextjs tutorial
 2. Revisar el modo de hacer las peticiones ahora que existe REDUX (redux-thunk). A lo mejor ya no es necesario "isomorphic-unfetch" o "swr".
 3. Meter TS en hello-next.
 4. Hacer lo de JWT para el login de la plataforma. Podemos usar la API que ofrece Nextjs (ver carpeta src/pages/api).
+
+## Lecturas recomendadas
+
+- https://github.com/selfup/nextjs-docker/blob/master/Dockerfile
+- https://github.com/clue/docker-json-server
