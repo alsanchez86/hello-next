@@ -8,7 +8,7 @@ services:
             context: .
             dockerfile: Dockerfile
         environment:
-            PROTOCOL: https
+            PROTOCOL: http
             HOSTNAME: metajob
             NEXTJS_PORT: 3000
             PUBLIC_PORT: 8080

@@ -1,6 +1,6 @@
 {
     "local": {
-        "protocol": "https",
+        "protocol": "http",
         "host": "localhost",
         "port": "3000",
         "aux": "api/"
