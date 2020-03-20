@@ -51,15 +51,24 @@ docker-compose.yml
 ## Ver valores de las variables de entorno en Powershell
 
     Get-ChildItem Env:
+    Get-ChildItem Env:PROTOCOL
     Get-ChildItem Env:HOSTNAME
     Get-ChildItem Env:NEXTJS_PORT
     Get-ChildItem Env:PUBLIC_PORT
 
 ## Actualizar valores de las variables de entorno en Powershell
 
+    Set-Item Env:PROTOCOL -Value [value]
     Set-Item Env:HOSTNAME -Value [value]
     Set-Item Env:NEXTJS_PORT -Value [value]
     Set-Item Env:PUBLIC_PORT -Value [value]
+
+## Eliminar variable de entorno
+
+    Remove-Item Env:PROTOCOL
+    Remove-Item Env:HOSTNAME
+    Remove-Item Env:NEXTJS_PORT
+    Remove-Item Env:PUBLIC_PORT
 
 ## Otros
 
