@@ -24,7 +24,7 @@ app
     .then(() => {
         createServer((request, response) => {
             const parsedUrl = parse(request.url, true);
-            app.getRequestHandler(request, response, parsedUrl);
+            app.getRequestHandler()(request, response, parsedUrl);
         })
         .listen(endpoints.local.port, (error) => {
             if (error) {
