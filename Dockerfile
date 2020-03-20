@@ -4,7 +4,8 @@ FROM node:10
 WORKDIR /usr/src/app
 
 # Installing dependencies
-COPY package*.json ./
+COPY package.json .
+COPY package-lock.json .
 RUN npm i
 
 # Copying source files
@@ -14,4 +15,4 @@ COPY . .
 RUN npm run build
 
 # Running the app
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]

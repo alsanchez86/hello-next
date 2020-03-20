@@ -3,7 +3,12 @@ version: '3.1'
 services:
     nextjs:
         ports:
-            - 3000:3000
+            - 8080:3000
         build:
             context: .
             dockerfile: Dockerfile
+        environment:
+            PROTOCOL: https
+            HOSTNAME: metajob
+            NEXTJS_PORT: 3000
+            PUBLIC_PORT: 8080

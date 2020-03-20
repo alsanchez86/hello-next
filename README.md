@@ -4,15 +4,16 @@ Nextjs tutorial
 
 ## ECOSISTEMA
 
-- react
-- redux
-- react thunk
-- typescript
-- Nextjs
-- Auth login: https://carlosazaustre.es/que-es-la-autenticacion-con-token/
-    - react router -> NO. Con Next no hace falta.
-    - bootstrap -> NO. Tenemos ITCSS de Everis.
-    - reactstrap -> NO. Estamos usando primereact.
+[X] react
+[X] primereact: https://www.primefaces.org/primereact/showcase/#/setup
+[X] redux
+[ ] react thunk
+[X] typescript
+[X] Nextjs
+[X] Auth login: https://carlosazaustre.es/que-es-la-autenticacion-con-token/
+[ ] react router -> NO. Con Next no hace falta.
+[ ] bootstrap -> NO. Tenemos ITCSS de Everis.
+[ ] reactstrap -> NO. Estamos usando primereact.
 
 ## HELPERS
 
@@ -24,12 +25,15 @@ Nextjs tutorial
 
 ## TODO
 
-1. Meter REDUX en hello-next.
-2. Revisar el modo de hacer las peticiones ahora que existe REDUX (redux-thunk). A lo mejor ya no es necesario "isomorphic-unfetch" o "swr".
-3. Meter TS en hello-next.
-4. Hacer lo de JWT para el login de la plataforma. Podemos usar la API que ofrece Nextjs (ver carpeta src/pages/api).
+[X] Meter REDUX en hello-next.
+[ ] Revisar el modo de hacer las peticiones ahora que existe REDUX (redux-thunk). A lo mejor ya no es necesario "isomorphic-unfetch" o "swr".
+[ ] Meter TS en hello-next.
+[ ] Hacer lo de JWT para el login de la plataforma. Podemos usar la API que ofrece Nextjs (ver carpeta src/pages/api).
 
 ## Lecturas recomendadas
 
 - https://github.com/selfup/nextjs-docker/blob/master/Dockerfile
-- https://github.com/clue/docker-json-server
+
+## Init docker container
+
+- docker-compose up --build

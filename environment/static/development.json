@@ -1,8 +1,0 @@
-{
-    "nextApi": {
-        "protocol": "http://",
-        "port": "3000",
-        "domain": "localhost",
-        "absolute": "http://localhost:3000"
-    }
-}
