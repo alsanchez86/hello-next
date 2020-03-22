@@ -6,12 +6,16 @@ Nextjs seed proyect
 - [ ] Revisar el modo de hacer las peticiones ahora que existe REDUX (redux-thunk). A lo mejor ya no es necesario "isomorphic-unfetch" o "swr".
 - [ ] Meter TS en hello-next.
 - [ ] Hacer lo de JWT para el login de la plataforma. Podemos usar la API que ofrece Nextjs (ver carpeta src/pages/api).
+- [ ] Añadir loader general para mostrar cuando la página se esté renderizando en el lado del servidor.
+- [ ] Crear un sistema para indicar que tipo de renderizado usa cada página. Poner un README.md en cada directorio o algo, o un comentario en la cabecera de la propia página.
+
+- Valorar si meter el redux a nivel de _app.js, o a nivel de página para dividir el estado de la aplicación en dichas páginas. Para este último caso, es necesario redux? y si ponemos un contexto único a nivel de página?
 
 # Ecosistema
 
 - [X] react
 - [X] primereact: https://www.primefaces.org/primereact/showcase/#/setup
-- [X] redux
+- [X] redux: https://github.com/Waqas-Abbasi/nextjs-react-redux-example
 - [ ] react thunk
 - [X] typescript
 - [X] Nextjs
@@ -76,3 +80,5 @@ docker-compose.yml
 - FRONTAL: https://github.com/alan2207/nextjs-jwt-authentication
 - https://medium.com/@bhavikbamania/a-beginner-guide-for-redux-with-next-js-4d018e1342b2
 - https://github.com/bhavikji/jwtauthenticationwithredux/blob/master/package.json
+- https://github.com/kirill-konshin/next-redux-wrapper
+- https://spectrum.chat/next-js/general/can-someone-explain-to-me-how-next-redux-wrapper-works-how-many-stores-does-it-build-on-the-server-on-the-client-how-is-the-data-handled~5777828e-0af5-483c-9e1d-f0f8b8e11bc0

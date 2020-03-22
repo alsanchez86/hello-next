@@ -5,7 +5,7 @@
  * See for more information: https://nextjs.org/docs/advanced-features/custom-server
  * Basic Nextjs custom server example: https://github.com/zeit/next.js/blob/canary/examples/custom-server/server.js
  * TODO: Implement SSR Caching: https://github.com/zeit/next.js/blob/canary/examples/ssr-caching/server.js
- *
+ * TODO: https://medium.com/@anMagpie/secure-your-local-development-server-with-https-next-js-81ac6b8b3d68
  *
  */
 
@@ -15,8 +15,6 @@ const next = require("next");
 const endpoints = require("./endpoints");
 const dev = (process.env.NODE_ENV !== "production");
 const app = next({ dev });
-
-// TODO: https://medium.com/@anMagpie/secure-your-local-development-server-with-https-next-js-81ac6b8b3d68
 
 // Init server app! :)
 app

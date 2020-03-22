@@ -32,7 +32,7 @@
         "swr": "^0.1.16"
     },
     "devDependencies": {
-        "node-sass": "^4.13.1",
-        "cross-env": "^7.0.0"
+        "cross-env": "^7.0.0",
+        "node-sass": "^4.13.1"
     }
 }
