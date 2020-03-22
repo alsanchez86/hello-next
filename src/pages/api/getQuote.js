@@ -1,5 +1,5 @@
 import quotes from "./quotes.json";
-import { getRandomElementFromArray } from "../../utils/getRandomElementFromArray";
+import { getRandomElementFromArray } from "../../utils/get-random-element-from-array";
 
 export default (request, response) => {
     const { author } = request?.query;
